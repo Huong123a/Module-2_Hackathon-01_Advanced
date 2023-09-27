@@ -1,0 +1,148 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: #fefdfd;
+}
+
+header {
+  background-color: #f4a460;
+  color: #fff;
+
+  padding: 10px 10px;
+  margin-bottom: 20px;
+}
+
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.note-app-container {
+  text-align: center;
+}
+.note-app-container button {
+  background-color: transparent;
+  border: none;
+}
+
+input[type="text"] {
+  padding: 10px;
+  width: 60%;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+#add-note {
+  background-color: #f4a460;
+  color: #fff;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+#error-message {
+  color: red;
+  margin-top: 10px;
+}
+
+.tasks {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.task-content {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 10px;
+  text-align: center;
+}
+.task-content button {
+  border: none;
+
+  background-color: transparent;
+}
+
+.task-card .icon {
+  margin-top: 10px;
+}
+
+.fa-pen-to-square {
+  color: blue;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.fa-trash {
+  color: red;
+  cursor: pointer;
+}
+
+.tooltiptext {
+  visibility: hidden;
+  width: 80px;
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  border-radius: 5px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+
+.task-content:hover .fa-pen-to-square:hover .tooltiptext,
+.task-content:hover .fa-trash:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}
+
+.task-content {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  margin: 10px;
+  text-align: left;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.task-content:hover {
+  background-color: #f5f5f5;
+  transform: translateY(-3px);
+}
+
+.task-content p {
+  margin: 0;
+  font-size: 16px;
+}
+
+.task-content .icon {
+  margin-top: 10px;
+  text-align: right;
+}
+
+.task-content .icon .fa-pen-to-square,
+.task-content .icon .fa-trash {
+  font-size: 20px;
+  margin-left: 10px;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.task-content:hover .icon .fa-pen-to-square:hover,
+.task-content:hover .icon .fa-trash:hover {
+  color: blue;
+}
+.delete-btn {
+  text-align: right;
+}
